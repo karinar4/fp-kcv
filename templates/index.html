@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <title>Diabetes Prediction</title>
+
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="static/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
+  <link href="static/css/style.css" rel="stylesheet" />
+  <link href="static/css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <div class="prediction layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <form action="{{ url_for('predict')}}"method="post">
+            <h4>
+              DIABETES <span>PREDICTION</span>
+            </h4>
+            <div class="form-row ">
+              <div class="form-group col-lg-6">
+                <label for="gender">Gender </label>
+                <select name="gender" class="form-control wide" id="gender" required>
+                  <option value=0>Female </option>
+                  <option value=1>Male </option>
+                </select>
+              </div>
+              <div class="form-group col-lg-6">
+                <label for="age">Age</label>
+                <input type="text" class="form-control" name="age" id="age" required>
+              </div>
+            </div>
+
+            <div class="form-row ">
+              <div class="form-group col-lg-6">
+                <label for="hypertension">Hypertension</label>
+                <select name="hypertension" class="form-control wide" id="hypertension" required>
+                  <option value=0>No </option>
+                  <option value=1>Yes </option>
+                </select>
+              </div>
+              <div class="form-group col-lg-6">
+                <label for="heart_disease">Heart Disease</label>
+                <select name="heart_disease" class="form-control wide" id="heart_disease" required>
+                  <option value=0>No </option>
+                  <option value=1>Yes </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row ">
+              <div class="form-group col-lg-6">
+                <label for="smoking_history">Smoking History</label>
+                <select name="smoking_history" class="form-control wide" id="smoking_history" required>
+                  <option value=0>No Info</option>
+                  <option value=1>Current</option>
+                  <option value=2>Ever</option>
+                  <option value=3>Former</option>
+                  <option value=4>Never</option>
+                  <option value=5>Not Current</option>
+                </select>
+              </div>
+              <div class="form-group col-lg-6">
+                <label for="bmi">BMI</label>
+                <input type="text" class="form-control" name="bmi" id="bmi" required>
+             </div>
+            </div>
+
+            <div class="form-row ">
+              <div class="form-group col-lg-6">
+                <label for="hba1c_level">HbA1c Level</label>
+                <input type="text" class="form-control" name="hba1c_level" id="hba1c_level" required>
+              </div>
+              <div class="form-group col-lg-6">
+                <label for="blood_glucose_level">Blood Glucose Level</label>
+                <input type="text" class="form-control" name="blood_glucose_level" id="blood_glucose_level" required>
+             </div>
+            </div>
+
+            <button type="submit" class="btn ">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
